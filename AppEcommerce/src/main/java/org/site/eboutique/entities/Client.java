@@ -8,11 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
 @Entity
 public class Client implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idClient;
+	@NotEmpty
 	private String nomClient;
 	private String adresse;
 	private String email;
